@@ -14,6 +14,9 @@
   justify-content: center;
 
 }
+input{
+  text-indent: 10px;
+}
 .container{
   max-width: 990px;
   margin: auto;
@@ -22,6 +25,47 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.sel-box{
+  margin: 90px auto;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  
+}
+
+.sel-inp{
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(255, 253, 253, 0.94);
+border: 3px solid #0B2559;
+border-radius: 30px;
+}
+.btn-box{
+margin: 10px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.btn{
+  margin-right: 10px;
+  background: #0B2559;
+border-radius: 20px;
+width: 244px;
+height: 74px;
+color: #FFFF;
+outline: none;
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 33px;
+text-align: center;
 }
 .content{
   background-color: rgba(196, 196, 196, 0.16);
@@ -153,6 +197,57 @@ color: #0B2559 ;
 }
 .hero-row{
   margin: 25px 0;
+}
+
+.loginpage{
+  background: url('./assets/logbck.jpeg') no-repeat center center/cover;
+  min-height: 100vh;
+}
+.loginform{
+  width: 510px;
+min-height: 635px;
+
+
+background: rgba(255, 253, 253, 0.94);
+border-radius: 40px;
+display: flex;
+align-items: center;
+
+flex-direction: column;
+}
+.loginform h1{
+  margin: 20px;
+  text-align: center;
+  font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 65px;
+text-align: center;
+
+color: #0B2559;
+}
+.fofe{
+  background: #C4C4C4;
+border-radius: 20px;
+padding: 20px 0;
+width: 75%;
+margin: 20px 0;
+border: none;
+}
+.logbtn{
+  margin: 10px 0;
+  width: 243px;
+height: 61px;
+color: #FFFF;
+background: #0B2559;
+border-radius: 40px;
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 38px;
+text-align: center;
 }
 @media screen and (max-width: 980px) {
   .fl-row{

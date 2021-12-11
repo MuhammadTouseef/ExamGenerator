@@ -15,9 +15,9 @@ export const Sidenav = () => {
       </div>
       <div className={`sidebar ${drawer}`}>
         <h1 className="logo">Exam Generator</h1>
-        <Navitems title="Home" link="/home" />
+        <Navitems title="Home" link="/dashboard" />
         <Navitems title="Past Paper Analysis" link="/home" />
-        <Navitems title="Exam Generator" link="/home" />
+        <Navitems title="Exam Generator" link="/dashboard" />
         <Navitems title="Attempt Exam" link="/home" />
         <Navitems title="Profile" link="/home" />
       </div>
