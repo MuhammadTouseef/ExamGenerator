@@ -1,41 +1,37 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 export const LoginPage = () => {
-    let navigate = useNavigate();
-    const [email, setemail] = useState('')
-const [password, setpassword] = useState('')
-const Subfr = async () => {
+  let navigate = useNavigate();
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const Subfr = async () => {
     let data = {
-     
       email: email,
       password: password,
-     
     };
 
     try {
       var res = await axios.post("/api/v1/auth/login", data);
       if (res.data["success"] === true) {
-        localStorage.setItem('x-auth-token', res.data.token);
-        navigate('dashboard');
+        localStorage.setItem("x-auth-token", res.data.token);
+        navigate("dashboard");
       } else {
         alert(`Invalid Credentials \n ${res["error"]}`);
       }
     } catch (error) {
       alert("Invalid Credentials");
     }
-   
   };
   const logn = () => {
-    if ( email === "" || password === "" ) {
+    if (email === "" || password === "") {
       alert("Please Fill All Fields to proceed");
     } else {
       Subfr();
     }
   };
   return (
-
     <div className="loginpage f-center">
       <div className="loginform">
         <h1>EXAM GENERATOR</h1>
@@ -55,11 +51,23 @@ const Subfr = async () => {
           />
         </svg>
 
-        <input type="text" placeholder="Email" className="fofe" onChange={e => setemail(e.target.value)} />
-        <input type="password" placeholder="Password" className="fofe" onChange={e => setpassword(e.target.value)} />
+        <input
+          type="text"
+          placeholder="Email"
+          className="fofe"
+          onChange={(e) => setemail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="fofe"
+          onChange={(e) => setpassword(e.target.value)}
+        />
         <Link to="/">Forget Password?</Link>
 
-        <button className="logbtn" onClick={logn}>Login</button>
+        <button className="logbtn" onClick={logn}>
+          Login
+        </button>
         <Link to="/register">Don't have a account?</Link>
         <hr />
       </div>
